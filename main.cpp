@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <sstream>
+#include <string>
 
 using namespace std;
 
@@ -12,6 +13,8 @@ void deposit();
 void withdraw();
 
 void printBalance();
+
+void myFunction();
 
 int main() {
     cout << "\t\t\t________________________________________\n\n\n" << endl;
@@ -140,7 +143,7 @@ void deposit() {
         }else{
             int guess=1;
             while(guess<3 && Password!= onlyPass){
-                cout<<"\nIncorrect Password. Try again."<<endl;
+                cout<<"\nIncorrect Password. ";
                 cout<<"Enter Password:";
                 cin>>Password;
                 guess++;
@@ -319,6 +322,12 @@ void printBalance() {
         }
     }
     accDetail.close();
+}
+
+void myFunction(){
+    for(int i=3;i>0;i--){
+        cout<< "You have " + to_string(i) + " tries left";
+    }
 }
 /**
 * What we need to have:
